@@ -1,0 +1,22 @@
+{
+  "name": "preact-tag",
+  "version": "0.0.1",
+  "description": "This small library allows to encapsulate the use of components based on Preact and CustomElements.",
+  "main": "dist/preact-tag.js",          
+  "umd:main": "dist/preact-tag.umd.js",  
+  "module": "dist/preact-tag.m.js",      
+  "source": "src/index.js", 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UpperCod/preact-tag.git"
+  },
+  "devDependencies": {
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-terser": "^1.0.1",
+    "rollup-plugin-uglify": "^4.0.0"
+  },
+  "dependencies": {
+    "preact": "^8.3.1"
+  }
+}
