@@ -1,7 +1,8 @@
 # preact-tag
 
-This small library(<1kbs) allows to encapsulate the use of components based on **Preact** and **CustomElements**.
+This small library(<520 bytes umd/gzip) allows to encapsulate the use of components based on **Preact** and **CustomElements**.
 
+### JS
 ```js
 import {h,Component} from "preact";
 import register from "preact-tag";
@@ -19,6 +20,12 @@ register(
        }
    }
 );
+```
+
+### HTML
+
+```html
+<preact-tag title="web component"></preact-tag>
 ```
 
 By adding the static method `props` to the component created on the basis of `preact.Component`, you can recover and know the mutations of the properties associated with **CustomElement**.

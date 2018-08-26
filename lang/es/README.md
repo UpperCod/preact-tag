@@ -1,7 +1,8 @@
 # preact-tag
 
-Esta pequeña librería (<1kbs) permite encapsular el uso de componentes a base de **Preact** y **CustomElements**.
+Esta pequeña librería (<520 bytes umd/gzip) permite encapsular el uso de componentes a base de **Preact** y **CustomElements**.
 
+### JS
 ```js
 import {h,Component} from "preact";
 import register from "preact-tag";
@@ -21,11 +22,17 @@ register(
 );
 ```
 
+### HTML
+
+```html
+<preact-tag title="web component"></preact-tag>
+```
+
 Al añadir el método estático `props` al componente creado a base de `preact.Component`, ud podrá recuperar y conocer las mutaciones de las propiedades asociadas al **CustomElement**.
 
 ## prefijo json-{prop}
 
-Cualquier propiedad dentro del **CustomElement** puede ser json, simplemente anteponiendo como nombre a dicha propiedad el prefijo **json-**, luego ud podrá hacer uso de esta mediante `this.props.json<prop>`, por defecto preact-tag, aplica el formato camelCase, para normalizar el nombre de la propiedad
+Cualquier propiedad dentro del **CustomElement** puede ser parseada por `JSON.parse`, simplemente anteponiendo como nombre a dicha propiedad el prefijo **json-**, luego ud podrá hacer uso de esta mediante `this.props.json<prop>`, por defecto preact-tag, aplica el formato camelCase, para normalizar el nombre de la propiedad.
 
 ```js
 import {h,Component} from "preact";
